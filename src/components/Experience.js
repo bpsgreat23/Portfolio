@@ -120,6 +120,8 @@ const ItemContainer = styled.div`
   height: fit-content;
   padding: 1rem;
   border: 3px solid black;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
 `;
 
 const Box = styled.p`
@@ -128,6 +130,7 @@ const Box = styled.p`
   padding: 1rem;
   position: relative;
   border: 1px solid black;
+  text-align: justify;
 `;
 
 const SubTitle = styled.span`
@@ -175,11 +178,24 @@ const Experience = () => {
           </SvgContainer>
           <Items>
             <ParticleComponent theme="light" />
-            <Item>&nbsp;</Item>
             <RoadMapItem
-              title="Web Developer @Bharat Intern"
-              subtext={`I acquired the internship between 10th July 2023 to 10th August 2023 in which I developed and launched a unit conversion website, achieving a 6% increase in user engagement within the first month of launch, designed and implemented a professional portfolio website, showcasing my projects and skills to a global audience, resulting in 3% more inquiries from potential clients and employers and utilized a comprehensive tech stack including HTML, CSS, Bootstrap, jQuery, and JavaScript to create intuitive and visually appealing frontend experiences.`}
+            title="Web Developer @Bharat Intern"
+            subtext={`I acquired the internship between July 2023 to August 2023 in which I developed and launched a unit conversion website, achieving a 6% increase in user engagement within the first month of launch, designed and implemented a professional portfolio website, showcasing my projects and skills to a global audience, resulting in 3% more inquiries from potential clients and employers and utilized a comprehensive tech stack including HTML, CSS, Bootstrap, jQuery, and JavaScript to create intuitive and visually appealing frontend experiences.`}
             />
+              <RoadMapItem
+              title="Software Engineering Intern @Sathee.Prutor.ai"
+              subtext={`I acquired the internship between July 2023 to August 2023 in which I Collaborated with cross-functional teams as a Software Engineer Trainee to develop and maintain the company’s Platform using the MarkDown Web Application.Contributed to enhancing user experience through responsive design implementations.Participated in feature development resulting in improvement in cross-platform compatibility and reduction in troubleshooting efforts, ensuring seamless functionality across various devices and browsers.Acquired proficiency in HTML5, CSS3, JavaScript, and React.js while actively contributing to real-world projects aimed at improving website performance and usability.`}
+              />
+            <ParticleComponent theme="light" />
+            
+              <RoadMapItem
+              title="FullStack Developer @Ai Arsenal Private Limited"
+              subtext={`I acquired the internship between July 2025 to August 2025 in which I Collaborated with cross-functional teams as a Full-Stack Developer Trainee to build and maintain web platforms using Next.js and TypeScript, ensuring scalable and maintainable codebases. Implemented SEO optimization strategies within Next.js applications to improve search engine rankings, page performance, and overall user acquisition. Developed and integrated RESTful APIs into frontend components, enabling seamless data flow, enhancing functionality, and improving application responsiveness across devices and browsers. Strengthened expertise in HTML5, CSS3, JavaScript, TypeScript, React.js, and Next.js while actively contributing to projects focused on performance optimization, usability enhancements, and cross-platform compatibility.`}
+              />
+            <ParticleComponent theme="light" />
+            
+            
+              
           </Items>
         </Container>
         {/* </WrapperBox> */}

@@ -38,7 +38,37 @@ const Contact = styled.div`
   right: calc(1rem + 2vw);
   text-decoration: none;
   z-index: 1;
+  cursor: default;
+`;
+
+const ResumeButton = styled(motion.button)`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 12px;
+  color: ${(props) => props.theme.text};
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   cursor: pointer;
+  outline: none;
+
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1;
+
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  }
+
+  &:active {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+  }
 `;
 
 // const BLOG = styled(NavLink)`
@@ -59,6 +89,7 @@ const WORK = styled(NavLink)`
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
+  
 `;
 
 const Bottombar = styled.div`
@@ -175,8 +206,9 @@ const Main = () => {
           <span>{centerText}</span>
         </Center>
 
-        <Contact onClick={onButtonClick}>
-          <motion.h2
+        <Contact>
+          <ResumeButton
+            onClick={onButtonClick}
             initial={{
               y: -200,
               transition: { type: "spring", duration: 1.5, delay: 1 },
@@ -185,12 +217,13 @@ const Main = () => {
               y: 0,
               transition: { type: "spring", duration: 1.5, delay: 1 },
             }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            aria-label="Download Resume"
           >
             Resume
-            <ResumeIcon width={20} height={20} />
-          </motion.h2>
+            <ResumeIcon width={20} height={20} fill="currentColor" />
+          </ResumeButton>
         </Contact>
         {/* <BLOG to="/blog">
           <motion.h2
