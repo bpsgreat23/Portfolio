@@ -1,53 +1,29 @@
 export const Work = [
   {
     id: 1,
-    name: "Amazon Clone",
+    name: "AI-Powered Learning Roadmap",
     description:
-      "A clone of Amazon which involves a comprehensive e-commerce platform that replicates the functionalities and features of Amazon.",
-    tags: ["HTML", "CSS", "Javascript", "Bootstrap"],
-    demo: "bpsgreat23.github.io/Amazon-Clone-/",
-    github: "httpsgithub.com/bpsgreat23/Amazon-Clone-",
+      "AI-driven platform generating learning roadmaps by aggregating resources from multiple platforms using concurrent pipelines. Integrated Groq LLM with a Flask backend and multi-source scraping for fast responses and high uptime.",
+    tags: ["Groq API", "Flask", "NLP", "React", "Tailwind", "Web Scraping"],
+    demo: "https://example.com/ai-learning-roadmap",
+    github: "https://github.com/bpsgreat23/ai-learning-roadmap",
   },
   {
     id: 2,
-    name: "Todo's List",
-    description: `Implemented features enabling individuals to create, prioritize, and monitor
-    their to-do items,`,
-    tags: ["React.Js", "Bootstrap", "UI-Libraries", "CSS"],
-    demo: "glowing-eclair-f9d758.netlify.app/",
-    github: "github.com/bpsgreat23/Todo",
+    name: "Redundant Requirements Detection System",
+    description:
+      "Detects SRS requirement duplicates using semantic similarity with BERT embeddings alongside TF-IDF and Word2Vec. End-to-end pipeline for tokenization, embedding generation, and similarity scoring with 95% accuracy.",
+    tags: ["BERT", "TF-IDF", "Word2Vec", "NLP", "Python"],
+    demo: "https://example.com/redundant-requirements-detection",
+    github: "https://github.com/bpsgreat23/redundant-requirements-detection",
   },
   {
     id: 3,
-    name: "Restaurant Website",
-    description: `A Web-Based application to access weather-related data and forecasts.
-    Enable users to access real-time or forecasted weather conditions for specific locations`,
-    tags: ["jQuery", "CSS", "React.Js", "Bootstrap"],
-    demo: "https://retroapp.netlify.app/",
-    github: "https://github.com/bpsgreat23/Restro",
-  },
-  {
-    id: 4,
-    name: "Weather API",
+    name: "Agrotech Platform (AgriTech Solution)",
     description:
-      "A Web-Based application to access weather-related data and forecasts.",
-    tags: [
-      "React.Js",
-      "CSS",
-      "Bootstrap",
-      "Javascript",
-      "API's",
-    ],
-    demo: "https://chipper-frangollo-e98d49.netlify.app/",
-    github: "https://github.com/bpsgreat23/weather",
+      "Full-stack AgriTech solution for land leasing, crop recommendation, and agro-product sales. Implements district-specific crop prediction models with scikit-learn, Flask APIs, and MongoDB.",
+    tags: ["AgriTech", "Flask", "scikit-learn", "MongoDB", "React"],
+    demo: "https://example.com/agrotech-platform",
+    github: "https://github.com/bpsgreat23/agrotech-platform",
   },
-  {
-    id: 5,
-    name: "E-Swasthya",
-    description: `A Healthcare Web App to find availability of beds in the nearest hospital by using API's like Delhi Government and Google Map API.`,
-    tags: ["React.Js", "CSS", "MongoDB","Node.Js"],
-    demo: "e-swasthya.vercel.app/hospitalsnearby",
-    github: "github.com/bpsgreat23/E-Swasthya",
-  },
-  
 ];

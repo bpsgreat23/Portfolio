@@ -12,32 +12,43 @@ import BigTitle from "../subComponents/BigTitle";
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 4rem 1rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
-  /* background-color: ${(props) => props.theme.body}; */
   padding: 2rem;
   width: 60vw;
-  height: 70vh;
+  min-height: 70vh;
   z-index: 3;
-  line-height: 1;
+  line-height: 1.2;
   font-family: "Ubuntu Mono", monospace;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: left;
+  gap: 0.9rem;
+  justify-content: flex-start;
+  align-items: flex-start;
   cursor: pointer;
 
   &:hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.text};
+  }
+
+  @media (max-width: 768px) {
+    width: 92vw;
+    min-height: auto;
+    padding: 1.4rem;
   }
 `;
 
@@ -98,28 +109,42 @@ const MySkillpage = () => {
           </Title>
           <Description>
             <span>Languages: </span>
-             C/C++, JavaScript, Python
+            Python, JavaScript, TypeScript, C, C++, SQL
           </Description>
+
           <Description>
-            <span>Domains: </span>
-             Web Development, Computer Networks, Object Oriented Programming, Database Management, SQL, Operating Systems
+            <span>Frontend: </span>
+            React.js, Next.js, HTML5, CSS3, Tailwind CSS
           </Description>
+
           <Description>
-            <span>React Libraries: </span>
-            Material UI, React Router, Redux, React Suite, React-Motion, React-Bootstrap.
+            <span>Backend & APIs: </span>
+            Flask, Node.js, Express.js, REST APIs, OAuth 2.0
           </Description>
+
           <Description>
-            <span>Softwares: </span>
-            VS Code, Git, Leetcode, Codeforces, Github, Codechef
+            <span>AI / ML / NLP: </span>
+            Supervised & Unsupervised ML, Deep Learning, NLP, BERT, TF-IDF,
+            Word2Vec, TensorFlow (Keras), LLMs, Groq API, OpenAI API, Prompt
+            Engineering, Reinforcement Learning (Q-Learning, SARSA, Policy
+            Gradients)
           </Description>
+
           <Description>
-            <span>Web Technologies: </span>
-            MongoDB, Express, ReactJS, NodeJS, Bootstrap, jQuery
+            <span>Data & Analytics: </span>
+            Pandas, NumPy, Matplotlib, Seaborn, Power BI, Tableau,
+            Scikit-learn, Folium
           </Description>
+
           <Description>
-            <span>Soft Skills: </span>
-            Team Work, Time Management, Leadership Quality, Communication
-            Skills, Literature Writing, Problem Solving
+            <span>Databases & Other: </span>
+            MongoDB, SQLite3, SQL, OCR, Web Scraping, Streamlit, Time Series
+            (ARIMA, ADF Test, ACF, PACF)
+          </Description>
+
+          <Description>
+            <span>DevOps & Tools: </span>
+            Git, GitHub, CI/CD Pipelines, Docker (basic), VS Code
           </Description>
         </Main>
       </Box>

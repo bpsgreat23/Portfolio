@@ -39,6 +39,7 @@ const Main = styled(motion.ul)`
 const Rotate = styled.span`
   display: block;
   position: fixed;
+  margin-top: 5rem;
   right: 2.5rem;
   bottom: 1rem;
   z-index: 1;

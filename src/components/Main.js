@@ -13,8 +13,8 @@ import Intro from "./Intro";
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow: visible;
   position: relative;
 
   h2,
@@ -37,7 +37,7 @@ const Contact = styled.div`
   top: 2rem;
   right: calc(1rem + 2vw);
   text-decoration: none;
-  z-index: 1;
+  z-index: 3;
   cursor: default;
 `;
 
@@ -88,7 +88,7 @@ const WORK = styled(NavLink)`
   right: calc(1rem);
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
-  z-index: 1;
+  z-index: 3;
   
 `;
 
@@ -101,24 +101,34 @@ const Bottombar = styled.div`
 
   display: flex;
   justify-content: space-evenly;
+  z-index: 3;
 `;
 
 const ABOUT = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   text-decoration: none;
-  z-index: 1;
+  z-index: 3;
 `;
 
 const EXPERIENCE = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   text-decoration: none;
-  z-index: 1;
+  z-index: 3;
+  margin-right:7px;
+
+  .white {
+    color: white;
+  }
+
+  .black {
+    color: black;
+  }
 `;
 
 const SKILLS = styled(NavLink)`
   color: ${(props) => props.theme.text};
   text-decoration: none;
-  z-index: 1;
+  z-index: 3;
 `;
 
 const rotate = keyframes`
@@ -134,7 +144,7 @@ const Center = styled.button`
   position: absolute;
   top: ${(props) => (props.click ? "70%" : "30%")};
   left: ${(props) => (props.click ? "83%" : "43%")};
-  transform: tanslate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border: none;
   outline: none;
   background-color: transparent;
@@ -145,6 +155,7 @@ const Center = styled.button`
   justify-content: center;
   align-items: center;
   transition: all 1s ease;
+  z-index: 3;
 
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
@@ -164,7 +175,7 @@ const DarkDiv = styled.div`
   right: 50%;
   width: ${(props) => (props.click ? "50%" : "0%")};
   height: ${(props) => (props.click ? "100%" : "0%")};
-  z-index: 1;
+  z-index: 0;
   transition: height 0.5s ease, width 0.5s ease 0.5s;
 `;
 
@@ -179,10 +190,10 @@ const Main = () => {
   };
 
   const onButtonClick = () => {
-    const pdfUrl = "Bhanu_Pratap_Singh.pdf";
+    const pdfUrl = "/Bhanu_Resume.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "Bhanu_Pratap_Singh.pdf"; // specify the filename
+    link.download = "Bhanu_Resume.pdf"; // specify the filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -287,7 +298,10 @@ const Main = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Experience
+              {/* Experience */}
+               <span className="white">Experie</span>
+               <span className="black">nce</span>
+                
             </motion.h2>
           </EXPERIENCE>
           <SKILLS to="/skills">

@@ -18,9 +18,9 @@ const Box = styled.div`
 
 const float = keyframes`
 0%{
-  tansform: translateY(-15px)
+  transform: translateY(-15px)
 } 33%{
-  tansform: translateY(35px) translateX(35px)
+  transform: translateY(35px) translateX(35px)
 } 67%{
   transform: translateY(-15px)
 }
@@ -43,7 +43,7 @@ const Main = styled.div`
   color: ${(props) => props.theme.text};
   padding: 2rem;
   width: 50vw;
-  height: 60vh;
+  min-height: 60vh;
   z-index: 3;
   line-height: 1.5;
 
@@ -59,6 +59,17 @@ const Main = styled.div`
 
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 9.5rem;
+    width: 92vw;
+    min-height: 62vh;
+    padding: 1.4rem;
+    font-size: calc(0.55rem + 2.2vw);
+  }
 `;
 
 // const Resume = styled.NavLink()`
@@ -79,17 +90,15 @@ const AboutPage = () => {
         </Spaceman>
  
         <Main>
-          I'm a technology enthusiast. I'm passionate about acquiring new skills
-          to solve real-world problems. My career objective is to work hard with
-          complete dedication.
+          Software Engineer with 1+ years of experience in AI/ML and full-stack
+          development, specializing in building AI-powered automation systems and
+          scalable web applications. Skilled in Python, React.js, Flask, NLP, and
+          Machine Learning, with a proven track record of delivering solutions
+          that drive real business impact.
           <br />
-          My primary interests include Software Engineering. I'm also a front-end web developer. In Web Development, I've experience with multiple technologies, particularly the MERN (MongoDB, Express, ReactJS, NodeJS) stack.
           <br />
-          I'm passionate about acquiring new skills to solve real-world
-          problems. I'm eager to learn new technologies and implement them. I'm
-          a motivated learner.
-          <br />
-          You can connect with me via social links.
+          Focus areas: AI-powered automation, NLP/LLMs, and production-ready web
+          apps using modern frontend + backend stacks.
         </Main>
 
         <BigTitle text="ABOUT" top="8%" left="5%" />

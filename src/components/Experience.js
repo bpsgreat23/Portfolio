@@ -10,9 +10,9 @@ import ParticleComponent from "../subComponents/ParticleComponent";
 import BigTitle from "../subComponents/BigTitle";
 
 const Section = styled.div`
-  /* border: 1px solid green; */
+   border: 1px solid green; 
   position: relative;
-  /* margin-top: 2rem; */
+   margin-top: 2rem; 
   overflow: hidden;
   width: 100vw;
   background-color: ${(props) => props.theme.body};
@@ -65,6 +65,7 @@ const Items = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 4rem;
   /* background-color: lightblue; */
 
   & > *:nth-of-type(2n + 1) {
@@ -113,6 +114,10 @@ const Item = styled.li`
   height: 100%;
   display: flex;
   /* border: 1px solid red; */
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const ItemContainer = styled.div`
@@ -122,6 +127,13 @@ const ItemContainer = styled.div`
   border: 3px solid black;
   margin-left: 1rem;
   margin-top: 1.5rem;
+
+  @media (max-width: 768px) {
+    width: 92vw;
+    margin-left: 0;
+    padding: 0.85rem;
+    margin-top: 1rem;
+  }
 `;
 
 const Box = styled.p`
@@ -138,6 +150,11 @@ const SubTitle = styled.span`
   font-size: 2em;
   text-transform: capitalize;
   color: black;
+
+  @media (max-width: 768px) {
+    font-size: 1.3em;
+    line-height: 1.2;
+  }
 `;
 
 const Text = styled.h3`
@@ -147,6 +164,13 @@ const Text = styled.h3`
   color: black;
   font-weight: 400;
   margin: 0.5rem 0;
+
+  white-space: pre-line;
+  line-height: 1.3;
+
+  @media (max-width: 768px) {
+    font-size: 0.95em;
+  }
 `;
 
 const RoadMapItem = ({ title, subtext }) => {
@@ -179,19 +203,19 @@ const Experience = () => {
           <Items>
             <ParticleComponent theme="light" />
             <RoadMapItem
-            title="Web Developer @Bharat Intern"
-            subtext={`I acquired the internship between July 2023 to August 2023 in which I developed and launched a unit conversion website, achieving a 6% increase in user engagement within the first month of launch, designed and implemented a professional portfolio website, showcasing my projects and skills to a global audience, resulting in 3% more inquiries from potential clients and employers and utilized a comprehensive tech stack including HTML, CSS, Bootstrap, jQuery, and JavaScript to create intuitive and visually appealing frontend experiences.`}
+              title="Associate Software Engineer @Bhatia Brothers FZE"
+              subtext={`• Built an AI-powered Cost Estimation Agent using NLP, OCR, and transformer-based parsing to automate data extraction from emails, RFQs, and BOQs — achieved 85–90% accuracy and reduced manual effort by 40%.
+• Developed predictive cost and profitability models using regression and ensemble learning to automate job costing sheets, improving pricing accuracy by 20% and cutting turnaround from hours to minutes.
+• Integrated Gmail ingestion with OAuth 2.0 and optimized inference pipelines, reducing manual email handling by 60% and processing latency by 30%.`}
             />
-              <RoadMapItem
-              title="Software Engineering Intern @Sathee.Prutor.ai"
-              subtext={`I acquired the internship between July 2023 to August 2023 in which I Collaborated with cross-functional teams as a Software Engineer Trainee to develop and maintain the company’s Platform using the MarkDown Web Application.Contributed to enhancing user experience through responsive design implementations.Participated in feature development resulting in improvement in cross-platform compatibility and reduction in troubleshooting efforts, ensuring seamless functionality across various devices and browsers.Acquired proficiency in HTML5, CSS3, JavaScript, and React.js while actively contributing to real-world projects aimed at improving website performance and usability.`}
-              />
             <ParticleComponent theme="light" />
             
-              <RoadMapItem
-              title="FullStack Developer @Ai Arsenal Private Limited"
-              subtext={`I acquired the internship between July 2025 to August 2025 in which I Collaborated with cross-functional teams as a Full-Stack Developer Trainee to build and maintain web platforms using Next.js and TypeScript, ensuring scalable and maintainable codebases. Implemented SEO optimization strategies within Next.js applications to improve search engine rankings, page performance, and overall user acquisition. Developed and integrated RESTful APIs into frontend components, enabling seamless data flow, enhancing functionality, and improving application responsiveness across devices and browsers. Strengthened expertise in HTML5, CSS3, JavaScript, TypeScript, React.js, and Next.js while actively contributing to projects focused on performance optimization, usability enhancements, and cross-platform compatibility.`}
-              />
+            <RoadMapItem
+              title="Full-Stack Developer Intern @Apna Samaj Tech Ltd."
+              subtext={`• Developed scalable web applications using Next.js, React.js, and TypeScript, reducing code redundancy by 20% and improving performance by 25% via lazy loading and code-splitting.
+• Implemented SEO optimization strategies, boosting search rankings by 15% and reducing page load time by 30%.
+• Built and integrated RESTful APIs for frontend-backend sync, cutting API response time by 40ms.`}
+            />
             <ParticleComponent theme="light" />
             
             
